@@ -16,9 +16,10 @@ By combining AutoHotkey (AHK) and Python, this tool allows you to replace select
 
 ## Prerequisites
 
-1. **Python 3.x** installed on your system.
-2. **AutoHotkey (v1.1 or v2)** installed.
-3. A Google Account.
+1. **Python 3.11.0** installed on your system.
+2. **Node.js 22.14.0** installed.
+3. **AutoHotkey (v2)** installed.
+4. A Google Account.
 
 ---
 
