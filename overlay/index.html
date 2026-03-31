@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grammar Corrector</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="overlay-container">
+    <!-- Header -->
+    <div class="header">
+      <div class="header-left">
+        <div class="logo-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 20h9"/>
+            <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/>
+          </svg>
+        </div>
+        <span class="title">Grammar Corrector</span>
+      </div>
+      <button class="close-btn" id="closeBtn">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18"/>
+          <line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Thinking State -->
+    <div class="thinking-container" id="thinkingContainer">
+      <div class="thinking-animation">
+        <div class="thinking-dot"></div>
+        <div class="thinking-dot"></div>
+        <div class="thinking-dot"></div>
+      </div>
+      <span class="thinking-text">Analyzing your text...</span>
+    </div>
+
+    <!-- Error State -->
+    <div class="error-container" id="errorContainer">
+      <div class="error-icon">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="10"/>
+          <line x1="12" y1="8" x2="12" y2="12"/>
+          <line x1="12" y1="16" x2="12.01" y2="16"/>
+        </svg>
+      </div>
+      <p class="error-text" id="errorText"></p>
+    </div>
+
+    <!-- Success State -->
+    <div class="success-container" id="successContainer">
+      <div class="success-icon">
+        <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <circle cx="12" cy="12" r="10"/>
+          <polyline points="8 12 11 15 16 9"/>
+        </svg>
+      </div>
+      <p class="success-text">Applied!</p>
+    </div>
+
+    <!-- Diff Content -->
+    <div class="diff-container" id="diffContainer">
+      <div class="diff-header">
+        <span class="diff-label">Changes</span>
+        <span class="correction-counter" id="correctionCounter">Correction 1 of 1</span>
+        <div class="diff-legend">
+          <span class="legend-item legend-removed">Removed</span>
+          <span class="legend-item legend-added">Added</span>
+        </div>
+      </div>
+      <div class="diff-content" id="diffContent"></div>
+    </div>
+
+    <!-- Action Buttons -->
+    <div class="actions" id="actionsContainer">
+      <button class="btn btn-reject" id="rejectBtn">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18"/>
+          <line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+        Reject All
+      </button>
+      <button class="btn btn-accept" id="acceptBtn">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polyline points="20 6 9 17 4 12"/>
+        </svg>
+        Accept All
+      </button>
+    </div>
+    <div class="keyboard-hint" id="keyboardHint">
+      <kbd>Enter</kbd> Accept · <kbd>Esc</kbd> Reject
+    </div>
+  </div>
+
+  <script src="renderer.js"></script>
+</body>
+</html>

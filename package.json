@@ -1,0 +1,19 @@
+{
+  "name": "grammar-corrector",
+  "version": "1.0.0",
+  "description": "Premium grammar correction tool with Gemini AI",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "keywords": ["grammar", "electron", "gemini", "ai"],
+  "author": "Patrick",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^28.0.0"
+  },
+  "dependencies": {
+    "diff": "^5.1.0",
+    "electron-store": "^8.1.0"
+  }
+}
